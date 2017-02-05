@@ -1,0 +1,71 @@
+
+<html>
+    <head>
+        <title>ChatApp</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+    
+    
+    
+    <div class = "ui grid">
+        
+        <div class = "two wide column">
+            <h3 class="ui header">Users</h3>
+            <div id ="allUsers">
+                
+                
+            </div>
+            
+        </div>
+        
+      <div class = "fourteen wide column">
+          
+          <div id="main">
+            <ol id = "messagelist" class="messagecompletepack"></ol>
+            </div>
+  
+                  
+                <div class="ui fluid action input">
+                    <form id = messageForm>
+                        <input name="message" type="text" id="message"placeholder="chat here"autofocus autocomplete="off"/>
+                        <button id="blueButton" class="ui blue button">Send</button>
+                    </form>
+                </div>
+                    
+          
+      </div>
+    
+    <script id="message-temp" type="text/template">
+        <li class="messageChat">
+            <div class="messageTitle">
+                <h4> {{from}} </h4>
+                <span> {{createdtime}} </span>
+            </div>
+            <div class"wholemessage">
+               <p> {{text}} </p>
+            </div>
+        </li>
+    </script>
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+  
+     <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+     <script src="/js/libs/mustache.js"></script>
+     <script src="/js/libs/deparam.js"></script>
+     <script src="/js/chatRoom.js"></script>
+   
+   
+    </body>
+
+</html>

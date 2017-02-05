@@ -1,0 +1,55 @@
+<html>
+    
+    <head>
+        <title>Join the Chat</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      
+      
+    
+
+    
+    </head>
+        
+    <body class="thewhole">
+        
+        
+         <div class = "ui main text container segment">
+             <img class="ui small image" src="https://collective-behavior.com/wp-content/uploads/2014/11/Barcelona.png">
+            
+             <h4 class="ui header">Fc Barcelona</h4>
+             
+             
+                 <div class= "item">
+                     
+                     <form class="ui form" action="/chatRoom.html">
+                          <div class="field">
+                          <label> Nickname:</label>
+                          <input type="text" id="name"name="name" placeholder="Chat Name">
+                          <div class="disabled field">
+                          <label> Room:</label>
+                          <input type="text" name="room" placeholder="Room Name" value="Fc Barcelona">
+                          </div>
+                        </div>
+                             <button id ="buttonForm"class="fluid ui button" type="submit">Enter</button>
+                     </form>
+                 </div>
+                
+          </div>
+   <script>
+       $(document).ready(function() {
+     $('#buttonForm').prop('disabled', true);
+     $('#name').keyup(function() {
+        if($(this).val() != '') {
+           $('#buttonForm').prop('disabled', false);
+        }
+     });
+ });
+       
+       
+       
+   </script>
+   </body>
+  
+</html>
